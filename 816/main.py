@@ -70,6 +70,8 @@ def main():
     print(f'Time taken to generate points: {total_point_gen_time}s')
 
     dist_calculator_start_time = time.time()
+    # Assume closestpair() takes a list of points and returns the
+    # closest pair. TODO: Add file to github after adjustments
     a, b = closestpair(points_array)
     min_dist = calculate_distance(a, b)
     dist_calculator_end_time = time.time()
