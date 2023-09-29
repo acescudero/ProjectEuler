@@ -59,6 +59,7 @@ def calculate_distance(
 
 
 def main():
+    # Input 2000000 for the specific solution to the problem.
     num = int(input("Enter number: "))
 
     point_gen_start_time = time.time()
@@ -86,20 +87,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# 60.207972893961475
-# 60.207972893961475
-def find_shortest_dist(points: List[Tuple[int, int]]) -> float:
-    # VERY slow algorithm
-    min_dist = float("inf")
-    for i in range(len(points)):
-        print(f'i={i}')
-        print(f"Iteration i={i}")
-        point_1 = points[i]
-        for j in range(len(points)):
-            if i!=j:
-                point_2 = points[j]
-                dist = math.sqrt((point_1[0] - point_2[0])**2 + (point_1[1] - point_2[1])**2)
-                if dist < min_dist:
-                    min_dist = dist
-    return min_dist
