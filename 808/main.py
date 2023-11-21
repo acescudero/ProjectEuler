@@ -30,8 +30,7 @@ def reverse_integer(n) -> Tuple[int, bool]:
 
     # Reversing the integer also allows us to check if it's a palindrome by
     # saving a copy of the original number, and if it's equal to the final
-    # value of n that we reversed, then it's a palindrome. So we are basically
-    # "killing 2 birds with one stone"!
+    # value of n that we reversed, then it's a palindrome.
     return reverse, reverse == copy
 
 
@@ -52,8 +51,7 @@ def is_reversible(n: int, prime_dict: Dict[int, Any]) -> Tuple[int, bool]:
         # since we generated a dictionary that contains primes, we can just
         # check if int_val is in that dictionary which is an O(1) operation
         # instead of running an is_prime algorithm. However, after testing,
-        # simply calling is_prime yields basically the same runtime, so I guess
-        # sympy's isprime() function is super efficient.
+        # simply calling is_prime yields basically the same runtime
         '''
         prime_check = (
             is_prime(int_val) if int_val > 32452843 else int_val in prime_dict
